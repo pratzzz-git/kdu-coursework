@@ -12,7 +12,21 @@ public class SmartLockApplication {
     public static void main(String[] args) {
         SpringApplication.run(SmartLockApplication.class, args);
     }
-
+  // exercise1
+  /* @Bean
+    CommandLineRunner run(SmartLockService smartLockService) {
+        return args -> smartLockService.unlock("Guest");
+    }*/
+ //exercise2
+    /*@Bean
+CommandLineRunner run(SmartLockService smartLockService) {
+    return args -> {
+        smartLockService.checkBattery();
+        smartLockService.unlock("Guest");
+        smartLockService.unlock("Unknown");
+    };
+}
+*/
     @Bean
     CommandLineRunner run(SmartLockService smartLockService) {
         return args -> {
