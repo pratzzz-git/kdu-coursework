@@ -16,10 +16,14 @@ public class SmartLockApplication {
     @Bean
     CommandLineRunner run(SmartLockService smartLockService) {
         return args -> {
-            smartLockService.checkBattery();
-            smartLockService.unlock("Guest");
-            smartLockService.unlock("Unknown");
+            try {
+                smartLockService.unlock("");
+            } catch (Exception ignored) {
+                // intentionally ignored to allow app to continue
+            }
         };
     }
+
+
 
 }
