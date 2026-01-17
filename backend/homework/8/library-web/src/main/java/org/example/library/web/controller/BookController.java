@@ -1,6 +1,7 @@
 package org.example.library.web.controller;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;
 
 import org.example.library.api.dto.request.CreateBookRequest;
@@ -21,6 +22,8 @@ import org.springframework.data.domain.Pageable;
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
+
+@Slf4j
 @Tag(name = "Books", description = "Book management APIs")
 @RestController
 @RequestMapping("/books")
@@ -38,7 +41,12 @@ public class BookController {
     public ResponseEntity<BookResponse> createBook(
             @Valid @RequestBody CreateBookRequest request) {
 
+
+        log.info("POST /books called with title={}", request.getTitle());
+
         Book book = bookService.createBook(request.getTitle());
+
+        log.info("Book created successfully with id={}", book.getId());
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)
@@ -54,9 +62,19 @@ public class BookController {
             @PageableDefault(sort = "createdAt")
             @ParameterObject Pageable pageable
     ) {
+        log.info(
+                "GET /books called | status={} | titleContains={} | page={} | size={}",
+                status,
+                titleContains,
+                pageable.getPageNumber(),
+                pageable.getPageSize()
+        );
+
         Page<BookResponse> response =
                 bookService.getBooks(status, titleContains, pageable)
                         .map(BookMapper::toResponse);
+
+        log.info("GET /books returning {} records", response.getNumberOfElements());
 
         return ResponseEntity.ok(response);
     }
