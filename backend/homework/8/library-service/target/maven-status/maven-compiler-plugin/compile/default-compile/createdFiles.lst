@@ -1,0 +1,6 @@
+org\example\library\service\impl\AnalyticsServiceImpl.class
+org\example\library\service\impl\LoanServiceImpl.class
+org\example\library\service\impl\BookServiceImpl.class
+org\example\library\service\LoanService.class
+org\example\library\service\AnalyticsService.class
+org\example\library\service\BookService.class

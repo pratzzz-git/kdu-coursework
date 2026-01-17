@@ -1,0 +1,8 @@
+org\example\library\domain\enums\BookStatus.class
+org\example\library\domain\repository\UserRepository.class
+org\example\library\domain\entity\User.class
+org\example\library\domain\enums\Role.class
+org\example\library\domain\repository\LoanRepository.class
+org\example\library\domain\repository\BookRepository.class
+org\example\library\domain\entity\Loan.class
+org\example\library\domain\entity\Book.class

@@ -11,7 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
+import org.example.library.domain.enums.BookStatus;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -40,13 +42,16 @@ public class BookController {
     }
 
     @GetMapping
-    public ResponseEntity<List<BookResponse>> getAllBooks() {
-        return ResponseEntity.ok(
-                bookService.getAllBooks()
-                        .stream()
-                        .map(BookMapper::toResponse)
-                        .toList()
-        );
+    public ResponseEntity<Page<BookResponse>> getBooks(
+            @RequestParam(required = false) BookStatus status,
+            @RequestParam(required = false) String titleContains,
+            Pageable pageable
+    ) {
+        Page<BookResponse> response =
+                bookService.getBooks(status, titleContains, pageable)
+                        .map(BookMapper::toResponse);
+
+        return ResponseEntity.ok(response);
     }
 
 }

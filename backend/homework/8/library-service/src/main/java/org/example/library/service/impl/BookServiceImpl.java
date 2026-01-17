@@ -6,7 +6,8 @@ import org.example.library.domain.repository.BookRepository;
 import org.example.library.service.BookService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import java.util.List;
 import java.util.UUID;
 
@@ -46,4 +47,24 @@ public class BookServiceImpl implements BookService {
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
+    @Transactional(readOnly = true)
+    @Override
+    public Page<Book> getBooks(BookStatus status, String title, Pageable pageable) {
+
+        if (status != null && title != null) {
+            return bookRepository
+                    .findByStatusAndTitleContainingIgnoreCase(status, title, pageable);
+        }
+
+        if (status != null) {
+            return bookRepository.findByStatus(status, pageable);
+        }
+
+        if (title != null) {
+            return bookRepository.findByTitleContainingIgnoreCase(title, pageable);
+        }
+
+        return bookRepository.findAll(pageable);
+    }
+
 }
