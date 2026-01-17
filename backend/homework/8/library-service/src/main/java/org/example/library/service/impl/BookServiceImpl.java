@@ -4,13 +4,16 @@ import org.example.library.domain.entity.Book;
 import org.example.library.domain.enums.BookStatus;
 import org.example.library.domain.repository.BookRepository;
 import org.example.library.service.BookService;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import java.util.List;
 import java.util.UUID;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 @Transactional
 public class BookServiceImpl implements BookService {
@@ -47,24 +50,25 @@ public class BookServiceImpl implements BookService {
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
-    @Transactional(readOnly = true)
     @Override
+    @Transactional(readOnly = true)
     public Page<Book> getBooks(BookStatus status, String title, Pageable pageable) {
 
-        if (status != null && title != null) {
-            return bookRepository
-                    .findByStatusAndTitleContainingIgnoreCase(status, title, pageable);
-        }
+        Page<Book> page = bookRepository.findAll(pageable);
 
-        if (status != null) {
-            return bookRepository.findByStatus(status, pageable);
-        }
+        List<Book> filtered = page.getContent()
+                .stream()
+                .filter(book ->
+                        (status == null || book.getStatus() == status) &&
+                                (title == null || title.isBlank()
+                                        || book.getTitle().toLowerCase().contains(title.toLowerCase()))
+                )
+                .toList();
+        log.info("Fetching books with pagination");
 
-        if (title != null) {
-            return bookRepository.findByTitleContainingIgnoreCase(title, pageable);
-        }
-
-        return bookRepository.findAll(pageable);
+        return new PageImpl<>(filtered, pageable, page.getTotalElements());
     }
+
+
 
 }
