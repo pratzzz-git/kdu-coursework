@@ -1,5 +1,6 @@
-org\example\library\web\mapper\LoanMapper.class
+org\example\library\web\exception\GlobalExceptionHandler.class
 org\example\library\web\controller\LoanController.class
-org\example\library\web\controller\BookController.class
 org\example\library\web\LibraryApplication.class
+org\example\library\web\mapper\LoanMapper.class
+org\example\library\web\controller\BookController.class
 org\example\library\web\mapper\BookMapper.class

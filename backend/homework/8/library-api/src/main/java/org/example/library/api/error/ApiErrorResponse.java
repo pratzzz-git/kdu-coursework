@@ -1,8 +1,13 @@
 package org.example.library.api.error;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.Instant;
 import java.util.List;
 
+@Getter
+@Setter
 public class ApiErrorResponse {
 
     private Instant timestamp;
@@ -11,6 +16,4 @@ public class ApiErrorResponse {
     private String message;
     private List<ApiErrorDetail> details;
     private String correlationId;
-
-    // getters & setters
 }

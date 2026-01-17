@@ -31,12 +31,13 @@ public class LoanServiceImpl implements LoanService {
     }
 
     @Override
+    @Transactional
     public Loan borrowBook(UUID bookId, UUID userId) {
         Book book = bookRepository.findById(bookId)
                 .orElseThrow(() -> new IllegalStateException("Book not found"));
 
         if (book.getStatus() != BookStatus.AVAILABLE) {
-            throw new IllegalStateException("Book not available");
+            throw new IllegalStateException("BOOK_NOT_AVAILABLE");
         }
 
         User user = userRepository.findById(userId)
@@ -49,8 +50,12 @@ public class LoanServiceImpl implements LoanService {
 
         book.setStatus(BookStatus.CHECKED_OUT);
 
-        return loanRepository.save(loan);
+        // IMPORTANT: save loan, but book update happens in same transaction
+        loanRepository.save(loan);
+
+        return loan;
     }
+
 
     @Override
     public Loan returnBook(UUID bookId, UUID userId) {
