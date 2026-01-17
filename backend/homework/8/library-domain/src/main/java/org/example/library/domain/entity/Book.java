@@ -1,6 +1,8 @@
 package org.example.library.domain.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.example.library.domain.enums.BookStatus;
 
 import java.time.Instant;
@@ -8,6 +10,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "books")
+@Getter
+@Setter
 public class Book {
 
     @Id
@@ -33,6 +37,4 @@ public class Book {
     void onUpdate() {
         this.updatedAt = Instant.now();
     }
-
-    // getters & setters
 }

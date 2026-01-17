@@ -10,6 +10,7 @@
     <packaging>jar</packaging>
 
     <dependencies>
+
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>library-domain</artifactId>
@@ -21,6 +22,14 @@
             <artifactId>library-api</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <!-- Spring context + transactions -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
     </dependencies>
+
 
 </project>

@@ -1,6 +1,8 @@
 package org.example.library.domain.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.example.library.domain.enums.Role;
 
 import java.time.Instant;
@@ -8,6 +10,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "users")
+@Getter
+@Setter
 public class User {
 
     @Id
@@ -29,6 +33,4 @@ public class User {
 
     @Column(nullable = false, updatable = false)
     private Instant createdAt = Instant.now();
-
-    // getters & setters
 }

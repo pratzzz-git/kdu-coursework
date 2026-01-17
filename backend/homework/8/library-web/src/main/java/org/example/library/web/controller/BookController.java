@@ -5,6 +5,7 @@ import org.example.library.api.dto.response.BookResponse;
 import org.example.library.domain.entity.Book;
 import org.example.library.domain.enums.BookStatus;
 import org.example.library.domain.repository.BookRepository;
+import org.example.library.service.BookService;
 import org.example.library.web.mapper.BookMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,35 +21,32 @@ import java.util.stream.Collectors;
 @Validated
 public class BookController {
 
-    private final BookRepository bookRepository;
+    private final BookService bookService;
 
-    public BookController(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
+    public BookController(BookService bookService) {
+        this.bookService = bookService;
     }
+
 
     @PostMapping
     public ResponseEntity<BookResponse> createBook(
-            @Valid @RequestBody CreateBookRequest request
-    ) {
-        Book book = new Book();
-        book.setTitle(request.getTitle());
-        book.setStatus(BookStatus.PROCESSING);
+            @Valid @RequestBody CreateBookRequest request) {
 
-        Book saved = bookRepository.save(book);
+        Book book = bookService.createBook(request.getTitle());
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)
-                .body(BookMapper.toResponse(saved));
+                .body(BookMapper.toResponse(book));
     }
 
     @GetMapping
     public ResponseEntity<List<BookResponse>> getAllBooks() {
-        List<BookResponse> books =
-                bookRepository.findAll()
+        return ResponseEntity.ok(
+                bookService.getAllBooks()
                         .stream()
                         .map(BookMapper::toResponse)
-                        .collect(Collectors.toList());
-
-        return ResponseEntity.ok(books);
+                        .toList()
+        );
     }
+
 }
