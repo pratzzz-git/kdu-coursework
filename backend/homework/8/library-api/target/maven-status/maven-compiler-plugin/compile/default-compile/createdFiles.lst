@@ -1,8 +1,0 @@
-org\example\library\api\dto\response\BookResponse.class
-org\example\library\api\error\ApiErrorDetail.class
-org\example\library\api\dto\response\LoanResponse.class
-org\example\library\api\dto\request\ReturnBookRequest.class
-org\example\library\api\dto\request\CreateBookRequest.class
-org\example\library\api\dto\response\UserResponse.class
-org\example\library\api\error\ApiErrorResponse.class
-org\example\library\api\dto\request\BorrowBookRequest.class
