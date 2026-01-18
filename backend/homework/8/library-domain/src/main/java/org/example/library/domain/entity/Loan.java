@@ -8,7 +8,6 @@ import java.time.Instant;
 import java.util.UUID;
 
 @Entity
-@Table(name = "loans")
 @Getter
 @Setter
 public class Loan {
@@ -20,11 +19,6 @@ public class Loan {
     @ManyToOne(optional = false)
     private Book book;
 
-    @ManyToOne(optional = false)
-    private User borrower;
-
-    @Column(nullable = false)
-    private Instant borrowedAt = Instant.now();
-
+    private Instant borrowedAt;
     private Instant returnedAt;
 }

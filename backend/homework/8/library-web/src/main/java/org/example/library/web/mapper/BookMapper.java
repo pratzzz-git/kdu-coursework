@@ -3,7 +3,9 @@ package org.example.library.web.mapper;
 import org.example.library.api.dto.response.BookResponse;
 import org.example.library.domain.entity.Book;
 
-public class BookMapper {
+public final class BookMapper {
+
+    private BookMapper() {}
 
     public static BookResponse toResponse(Book book) {
         BookResponse response = new BookResponse();

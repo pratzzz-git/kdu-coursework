@@ -1,3 +1,5 @@
+debug: true
+
 spring:
   datasource:
     url: jdbc:h2:mem:librarydb
@@ -35,3 +37,11 @@ logging:
     org.springframework.data.jpa: DEBUG
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql: TRACE
+
+security:
+  users:
+    librarian-username: librarian
+    librarian-password: "{noop}${LIBRARIAN_PASSWORD}"
+
+    admin-username: admin
+    admin-password: "{noop}${ADMIN_PASSWORD}"

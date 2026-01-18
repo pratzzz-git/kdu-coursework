@@ -1,10 +1,8 @@
 package org.example.library.service.impl;
-
-import org.example.library.domain.entity.Book;
 import org.example.library.domain.repository.BookRepository;
 import org.example.library.service.AnalyticsService;
-import org.springframework.stereotype.Service;
 
+import org.springframework.stereotype.Service;
 import java.util.Map;
 import java.util.stream.Collectors;
 
