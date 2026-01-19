@@ -32,7 +32,7 @@ public class JwtUtil {
                 .setSubject(username)
                 .claim("role", role)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_MS))
+                .setExpiration(new Date(System.currentTimeMillis()))
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
