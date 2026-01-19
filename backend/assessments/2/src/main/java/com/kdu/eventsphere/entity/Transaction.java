@@ -1,6 +1,5 @@
 package com.kdu.eventsphere.entity;
 
-
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
@@ -22,5 +21,15 @@ public class Transaction {
     @JoinColumn(name = "booking_id")
     private Booking booking;
 
-    // getters and setters
+    // ===== GETTERS =====
+    public Long getId() { return id; }
+    public String getTransactionId() { return transactionId; }
+    public LocalDateTime getTransactionDate() { return transactionDate; }
+    public Booking getBooking() { return booking; }
+
+    // ===== SETTERS =====
+    public void setId(Long id) { this.id = id; }
+    public void setTransactionId(String transactionId) { this.transactionId = transactionId; }
+    public void setTransactionDate(LocalDateTime transactionDate) { this.transactionDate = transactionDate; }
+    public void setBooking(Booking booking) { this.booking = booking; }
 }
