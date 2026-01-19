@@ -23,14 +23,13 @@ public class ReservationService {
     }
 
     @Transactional
-    public ReservationResponseDto createReservation(
-            String username,
-            CreateReservationRequestDto dto) {
+    public ReservationResponseDto createReservation(String username,
+                                                    CreateReservationRequestDto dto) {
 
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        Event event = eventRepository.findById(dto.getEventId())
+        Event event = eventRepository.findByIdForUpdate(dto.getEventId())
                 .orElseThrow(() -> new RuntimeException("Event not found"));
 
         if (event.getAvailableTickets() < dto.getTicketCount()) {
@@ -57,6 +56,7 @@ public class ReservationService {
                 saved.getStatus()
         );
     }
+
 
     @Transactional
     public ReservationResponseDto updateReservation(
