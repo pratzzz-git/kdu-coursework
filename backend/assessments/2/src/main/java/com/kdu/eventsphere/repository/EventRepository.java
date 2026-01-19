@@ -1,4 +1,5 @@
 package com.kdu.eventsphere.repository;
+import org.springframework.data.repository.query.Param;
 
 import com.kdu.eventsphere.entity.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,5 +13,6 @@ public interface EventRepository extends JpaRepository<Event, Long> {
 
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     @Query("select e from Event e where e.id = :id")
-    Optional<Event> findByIdForUpdate(Long id);
+    Optional<Event> findByIdForUpdate(@Param("id") Long id);
+
 }
