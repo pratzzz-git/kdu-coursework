@@ -1,4 +1,4 @@
-package main.java.com.kdu.eventsphere.config;
+package com.kdu.eventsphere.config;
 
 import com.kdu.eventsphere.entity.User;
 import org.springframework.boot.CommandLineRunner;
@@ -9,7 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class DataInitializer {
 
     @Bean
-    CommandLineRunner init(UserRepository userRepository,
+    CommandLineRunner init(com.kdu.eventsphere.repository.UserRepository userRepository,
                            PasswordEncoder passwordEncoder) {
         return args -> {
 

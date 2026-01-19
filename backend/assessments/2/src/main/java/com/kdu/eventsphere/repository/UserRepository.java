@@ -1,4 +1,4 @@
-package main.java.com.kdu.eventsphere.repository;
+package com.kdu.eventsphere.repository;
 
 
 import com.kdu.eventsphere.entity.User;

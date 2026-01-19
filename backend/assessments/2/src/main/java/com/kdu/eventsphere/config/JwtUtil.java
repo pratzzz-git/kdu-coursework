@@ -1,4 +1,4 @@
-package main.java.com.kdu.eventsphere.config;
+package com.kdu.eventsphere.config;
 
 import io.jsonwebtoken.*;
 import org.springframework.stereotype.Component;

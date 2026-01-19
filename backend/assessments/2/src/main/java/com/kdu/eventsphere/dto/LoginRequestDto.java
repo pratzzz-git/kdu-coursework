@@ -1,4 +1,4 @@
-package main.java.com.kdu.eventsphere.dto;
+package com.kdu.eventsphere.dto;
 public class LoginRequestDto {
     private String username;
     private String password;

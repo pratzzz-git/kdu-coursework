@@ -14,11 +14,11 @@ public class ReservationService {
 
     private final ReservationRepository reservationRepository;
     private final EventRepository eventRepository;
-    private final main.java.com.kdu.eventsphere.repository.UserRepository userRepository;
+    private final com.kdu.eventsphere.repository.UserRepository userRepository;
 
     public ReservationService(ReservationRepository reservationRepository,
                               EventRepository eventRepository,
-                              main.java.com.kdu.eventsphere.repository.UserRepository userRepository) {
+                              com.kdu.eventsphere.repository.UserRepository userRepository) {
         this.reservationRepository = reservationRepository;
         this.eventRepository = eventRepository;
         this.userRepository = userRepository;
