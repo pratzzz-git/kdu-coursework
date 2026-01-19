@@ -10,13 +10,19 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private Integer reservedTickets;
 
+    @Column(nullable = false)
     private String status;
 
-    @ManyToOne
-    private User user;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id")
+    private com.kdu.eventsphere.entity.User user;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "event_id")
     private Event event;
+
+    // getters and setters
 }

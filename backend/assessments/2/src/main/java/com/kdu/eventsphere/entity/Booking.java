@@ -1,7 +1,6 @@
 package main.java.com.kdu.eventsphere.entity;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,13 +11,19 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String status;
 
+    @Column(nullable = false)
     private LocalDateTime bookingDate;
 
-    @ManyToOne
-    private User user;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id")
+    private com.kdu.eventsphere.entity.User user;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "event_id")
     private Event event;
+
+    // getters and setters
 }

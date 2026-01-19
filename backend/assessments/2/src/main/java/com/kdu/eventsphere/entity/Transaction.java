@@ -1,7 +1,7 @@
 package main.java.com.kdu.eventsphere.entity;
 
-import jakarta.persistence.*;
 
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,10 +12,15 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true)
     private String transactionId;
 
+    @Column(nullable = false)
     private LocalDateTime transactionDate;
 
-    @OneToOne
+    @OneToOne(optional = false)
+    @JoinColumn(name = "booking_id")
     private Booking booking;
+
+    // getters and setters
 }
