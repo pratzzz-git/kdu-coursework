@@ -20,28 +20,14 @@ public class SecurityConfig {
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
-        http.csrf(csrf -> csrf.disable())
+        http
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-
-                        // PUBLIC ENDPOINTS
-                        .requestMatchers(
-                                "/auth/**",
-                                "/swagger-ui/**",
-                                "/v3/api-docs/**"
-                        ).permitAll()
-
-                        // ADMIN ONLY
-                        .requestMatchers("/events/admin/**").hasRole("ADMIN")
-
-                        // EVERYTHING ELSE
-                        .anyRequest().authenticated()
-                )
-
-
-                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
-
-        return http.build();
+                        .anyRequest().permitAll()
+                );
+      return http.build();
     }
+
 
     @Bean
     PasswordEncoder passwordEncoder() {

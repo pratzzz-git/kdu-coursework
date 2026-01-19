@@ -8,6 +8,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 @Service
 public class ReservationService {
@@ -25,8 +26,12 @@ public class ReservationService {
     }
 
     @Transactional
-    public ReservationResponseDto createReservation(String username,
-                                                    CreateReservationRequestDto dto) {
+    public ReservationResponseDto createReservation(
+            CreateReservationRequestDto dto) {
+
+        String username = SecurityContextHolder.getContext()
+                .getAuthentication()
+                .getName();
 
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User not found"));

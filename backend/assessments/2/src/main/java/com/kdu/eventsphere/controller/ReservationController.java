@@ -17,13 +17,9 @@ public class ReservationController {
 
     @PostMapping
     public ReservationResponseDto create(
-            Authentication authentication,
             @RequestBody CreateReservationRequestDto dto) {
 
-        return reservationService.createReservation(
-                authentication.getName(),
-                dto
-        );
+        return reservationService.createReservation(dto);
     }
 
     @PutMapping("/{id}")
