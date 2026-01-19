@@ -99,6 +99,7 @@ public class BookingService {
                     return new RuntimeException("Booking not found");
                 });
 
+
         if (!"CONFIRMED".equals(booking.getStatus())) {
             log.error("Booking {} already cancelled or invalid state {}",
                     bookingId, booking.getStatus());

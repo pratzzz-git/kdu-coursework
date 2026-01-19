@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
@@ -13,19 +14,17 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    // ✅ MUST be at least 32 characters for HS256
-    private static final String SECRET =
-            "eventsphere-super-secure-secret-key-12345";
-
-    private static final long EXPIRATION_MS = 60 * 60 * 1000; // 1 hour
-
     private final SecretKey key;
+    private final long expirationMs;
 
-    public JwtUtil() {
-        this.key = Keys.hmacShaKeyFor(
-                SECRET.getBytes(StandardCharsets.UTF_8)
-        );
+    public JwtUtil(
+            @Value("${jwt.secret}") String secret,
+            @Value("${jwt.expiration}") long expirationMs
+    ) {
+        this.key = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
+        this.expirationMs = expirationMs;
     }
+
 
     public String generateToken(String username, String role) {
 
