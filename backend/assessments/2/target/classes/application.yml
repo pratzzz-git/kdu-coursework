@@ -1,3 +1,0 @@
-jwt:
-  secret: ${JWT_SECRET:eventsphere-dev-secret-change-me}
-  expiration: 3600000
