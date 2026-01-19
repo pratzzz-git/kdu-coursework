@@ -1,13 +1,13 @@
 package com.kdu.eventsphere.dto;
 
-public class CreateEventRequestDto {
+public class CreateReservationRequestDto {
 
-    private String name;
+    private Long eventId;
     private Integer ticketCount;
 
-    public String getName() { return name; }
+    public Long getEventId() { return eventId; }
     public Integer getTicketCount() { return ticketCount; }
 
-    public void setName(String name) { this.name = name; }
+    public void setEventId(Long eventId) { this.eventId = eventId; }
     public void setTicketCount(Integer ticketCount) { this.ticketCount = ticketCount; }
 }

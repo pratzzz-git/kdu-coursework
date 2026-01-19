@@ -1,4 +1,4 @@
-package main.java.com.kdu.eventsphere.entity;
+package com.kdu.eventsphere.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -23,7 +23,7 @@ public class Booking {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "event_id")
-    private Event event;
+    private com.kdu.eventsphere.entity.Event event;
 
     // getters and setters
 }

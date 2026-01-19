@@ -1,4 +1,4 @@
-package main.java.com.kdu.eventsphere.entity;
+package com.kdu.eventsphere.entity;
 
 
 import jakarta.persistence.*;

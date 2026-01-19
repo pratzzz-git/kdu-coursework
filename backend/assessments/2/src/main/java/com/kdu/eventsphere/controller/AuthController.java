@@ -1,4 +1,4 @@
-package main.java.com.kdu.eventsphere.controller;
+package com.kdu.eventsphere.controller;
 
 import main.java.com.kdu.eventsphere.config.JwtUtil;
 import com.kdu.eventsphere.entity.User;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/auth")
 public class AuthController {
 
-    private final UserRepository userRepository;
+    private final main.java.com.kdu.eventsphere.repository.UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;
 
-    public AuthController(UserRepository userRepository,
+    public AuthController(main.java.com.kdu.eventsphere.repository.UserRepository userRepository,
                           PasswordEncoder passwordEncoder,
                           JwtUtil jwtUtil) {
         this.userRepository = userRepository;

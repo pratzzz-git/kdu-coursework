@@ -1,4 +1,7 @@
-package main.java.com.kdu.eventsphere.repository;
+package com.kdu.eventsphere.repository;
 
-public class TransactionRepository {
+import main.java.com.kdu.eventsphere.entity.Transaction;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 }

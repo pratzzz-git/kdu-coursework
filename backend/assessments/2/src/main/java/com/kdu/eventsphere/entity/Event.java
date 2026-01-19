@@ -1,4 +1,4 @@
-package main.java.com.kdu.eventsphere.entity;
+package com.kdu.eventsphere.entity;
 
 import jakarta.persistence.*;
 
@@ -19,5 +19,39 @@ public class Event {
     @Column(nullable = false)
     private Boolean deleted = false;
 
-    // getters and setters
+    // ===== GETTERS =====
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getAvailableTickets() {
+        return availableTickets;
+    }
+
+    public Boolean getDeleted() {
+        return deleted;
+    }
+
+    // ===== SETTERS =====
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAvailableTickets(Integer availableTickets) {
+        this.availableTickets = availableTickets;
+    }
+
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
+    }
 }
