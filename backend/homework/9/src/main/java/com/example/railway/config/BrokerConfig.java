@@ -2,6 +2,7 @@ package com.example.railway.config;
 
 import com.example.railway.broker.EventBroker;
 import com.example.railway.broker.SimpleEventBroker;
+import com.example.railway.dto.event.PaymentEvent;
 import com.example.railway.dto.event.TicketBookedEvent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,4 +17,10 @@ public class BrokerConfig {
     ) {
         return new SimpleEventBroker<>(eventTaskExecutor);
     }
+
+    @Bean
+    public EventBroker<PaymentEvent> paymentEventBroker(TaskExecutor eventTaskExecutor) {
+        return new SimpleEventBroker<>(eventTaskExecutor);
+    }
+
 }
