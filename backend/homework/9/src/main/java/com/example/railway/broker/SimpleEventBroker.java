@@ -63,6 +63,9 @@ public class SimpleEventBroker<T> implements EventBroker<T> {
         } catch (InterruptedException ignored) {
         }
     }
+    public DeadLetterQueue<T> getDeadLetterQueue() {
+        return deadLetterQueue;
+    }
 
     @Override
     public void subscribe(EventSubscriber<T> subscriber) {
