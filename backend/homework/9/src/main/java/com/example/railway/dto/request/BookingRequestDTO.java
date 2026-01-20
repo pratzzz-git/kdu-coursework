@@ -1,6 +1,5 @@
 package com.example.railway.dto.request;
 
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 
 public class BookingRequestDTO {
@@ -11,7 +10,6 @@ public class BookingRequestDTO {
     @NotBlank
     private String seatNumber;
 
-    @Min(0)
     private int age;
 
     public String getUserId() {

@@ -9,12 +9,22 @@ import org.springframework.stereotype.Service;
 @Service
 public class InventoryService implements EventSubscriber<TicketBookedEvent> {
 
-    private static final Logger log = LoggerFactory.getLogger(InventoryService.class);
+    private static final Logger log =
+            LoggerFactory.getLogger(InventoryService.class);
 
     @Override
     public void handle(TicketBookedEvent event) {
-        log.info("Inventory updated: Seat {} occupied for booking {}",
+
+        if (event.getAge() < 0) {
+            throw new IllegalArgumentException(
+                    "Invalid age: " + event.getAge()
+            );
+        }
+
+        log.info(
+                "Inventory updated: Seat {} occupied for booking {}",
                 event.getSeatNumber(),
-                event.getBookingId());
+                event.getBookingId()
+        );
     }
 }
