@@ -2,8 +2,15 @@ type Movie {
   id: ID!
   title: String!
   genre: String!
+  director: Director
+  reviews: [Review]
 }
 
-type Query {
-  findMovieById(id: ID!): Movie
+type Review {
+  comment: String!
+  rating: Int!
+}
+
+type Mutation {
+  addReview(movieId: ID!, comment: String!, rating: Int!): Movie
 }

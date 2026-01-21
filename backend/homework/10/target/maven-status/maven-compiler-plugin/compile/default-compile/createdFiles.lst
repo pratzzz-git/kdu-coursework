@@ -1,5 +1,10 @@
 com\cinestream\CineStreamApplication.class
 com\cinestream\dto\MovieDto.class
+com\cinestream\entity\DirectorEntity.class
+com\cinestream\service\DirectorService.class
+com\cinestream\service\MovieService.class
+com\cinestream\entity\MovieEntity.class
+com\cinestream\repository\DirectorJpaRepository.class
 com\cinestream\controller\MovieController.class
 com\cinestream\repository\MovieRepository.class
-com\cinestream\service\MovieService.class
+com\cinestream\repository\MovieJpaRepository.class
