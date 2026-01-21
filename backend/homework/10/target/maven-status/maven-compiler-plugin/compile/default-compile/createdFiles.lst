@@ -1,0 +1,5 @@
+com\cinestream\CineStreamApplication.class
+com\cinestream\dto\MovieDto.class
+com\cinestream\controller\MovieController.class
+com\cinestream\repository\MovieRepository.class
+com\cinestream\service\MovieService.class
