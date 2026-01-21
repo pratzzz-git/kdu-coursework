@@ -9,8 +9,7 @@
     <groupId>com.cinestream</groupId>
     <artifactId>cinestream</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>CineStream GraphQL API</name>
-    <description>GraphQL Discovery API for CineStream</description>
+    <name>CineStream GraphQL</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,16 +24,22 @@
 
     <dependencies>
 
+        <!-- Spring MVC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- Spring GraphQL -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-graphql</artifactId>
         </dependency>
 
-        <!-- Spring Web (Servlet-based, not WebFlux) -->
+        <!-- JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
         <!-- H2 Database -->
@@ -42,18 +47,6 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
-        </dependency>
-
-        <!-- JPA (used from Exercise 2 onward) -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <!-- Logging -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
 
     </dependencies>

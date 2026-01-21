@@ -7,4 +7,5 @@ com\cinestream\entity\MovieEntity.class
 com\cinestream\repository\DirectorJpaRepository.class
 com\cinestream\controller\MovieController.class
 com\cinestream\repository\MovieRepository.class
+com\cinestream\dto\ReviewDto.class
 com\cinestream\repository\MovieJpaRepository.class

@@ -1,8 +1,20 @@
+# -------- ROOT QUERY --------
+type Query {
+  findMovieById(id: ID!): Movie
+}
+
+# -------- ROOT MUTATION --------
+type Mutation {
+  addReview(movieId: ID!, comment: String!, rating: Int!): Movie
+}
+
+# -------- TYPES --------
 type Movie {
   id: ID!
   title: String!
   genre: String!
   director: Director
+  reviews: [Review]
 }
 
 type Director {
@@ -11,6 +23,7 @@ type Director {
   totalAwards: Int!
 }
 
-type Query {
-  findMovieById(id: ID!): Movie
+type Review {
+  comment: String!
+  rating: Int!
 }
