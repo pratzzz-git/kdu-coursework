@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Java-assess-1" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="2" target="17" />
+      <module name="Backend-assessment-2" target="16" />
+      <module name="caching" target="11" />
+      <module name="cinestream" target="17" />
+      <module name="library-api" target="1.8" />
+      <module name="library-domain" target="1.8" />
+      <module name="library-service" target="16" />
+      <module name="library-web" target="16" />
+      <module name="smartHome" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Java-assess-1" options="-parameters" />
+      <module name="cinestream" options="-parameters" />
+      <module name="smartHome" options="" />
+    </option>
+  </component>
+</project>
