@@ -1,0 +1,22 @@
+package com.kickdrum.smarthome.dto.response;
+
+import com.kickdrum.smarthome.util.ErrorCode;
+
+public class ErrorResponse {
+
+    private ErrorCode code;
+    private String message;
+
+    public ErrorResponse(ErrorCode code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+    public ErrorCode getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+}
