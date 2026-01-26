@@ -1,16 +1,13 @@
-package com.kickdrum.smarthome.service;
+package com.kickdrum.smarthome.service.impl;
 
 import com.kickdrum.smarthome.entity.Device;
-import com.kickdrum.smarthome.entity.HouseUser;
 import com.kickdrum.smarthome.entity.Room;
 import com.kickdrum.smarthome.exception.BusinessException;
 import com.kickdrum.smarthome.repository.DeviceInventoryRepository;
 import com.kickdrum.smarthome.repository.DeviceRepository;
 import com.kickdrum.smarthome.repository.HouseUserRepository;
 import com.kickdrum.smarthome.repository.RoomRepository;
-import com.kickdrum.smarthome.service.impl.DeviceServiceImpl;
 import com.kickdrum.smarthome.util.ErrorCode;
-import com.kickdrum.smarthome.util.Role;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
