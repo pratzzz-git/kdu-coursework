@@ -7,4 +7,8 @@ public class MoveDeviceRequest {
     public Long getTargetRoomId() {
         return targetRoomId;
     }
+
+    public void setTargetRoomId(Long targetRoomId) {
+        this.targetRoomId = targetRoomId;
+    }
 }

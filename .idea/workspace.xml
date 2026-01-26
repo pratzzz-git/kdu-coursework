@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c34bd30-e891-4fd1-b9c3-e64500517368" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/assignments/1/src/main/java/com/kickdrum/smarthome/controller/graphql/SmartHomeGraphQLController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/assignments/1/src/main/java/com/kickdrum/smarthome/dto/graphql/DeviceGqlDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/assignments/1/src/main/java/com/kickdrum/smarthome/dto/graphql/HouseGqlDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/assignments/1/src/main/java/com/kickdrum/smarthome/dto/graphql/RoomGqlDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/assignments/1/src/test/java/com/kickdrum/smarthome/controller/device/DeviceControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/assignments/1/src/test/java/com/kickdrum/smarthome/service/DeviceServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/assignments/1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/assignments/1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/assignments/1/src/main/java/com/kickdrum/smarthome/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/assignments/1/src/main/java/com/kickdrum/smarthome/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/assignments/1/src/main/java/com/kickdrum/smarthome/dto/request/device/MoveDeviceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/assignments/1/src/main/java/com/kickdrum/smarthome/dto/request/device/MoveDeviceRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/assignments/1/src/main/resources/graphql/room-device.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/backend/assignments/1/src/main/resources/graphql/schema.graphqls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
