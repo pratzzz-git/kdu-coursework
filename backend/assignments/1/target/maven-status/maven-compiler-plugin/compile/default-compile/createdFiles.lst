@@ -51,6 +51,7 @@ com\kickdrum\smarthome\config\BCryptConfig.class
 com\kickdrum\smarthome\entity\Device.class
 com\kickdrum\smarthome\exception\ResourceNotFoundException.class
 com\kickdrum\smarthome\dto\request\device\MoveDeviceRequest.class
+com\kickdrum\smarthome\config\SwaggerConfig.class
 com\kickdrum\smarthome\repository\DeviceRepository.class
 com\kickdrum\smarthome\service\DeviceService.class
 com\kickdrum\smarthome\dto\request\house\CreateHouseRequest.class

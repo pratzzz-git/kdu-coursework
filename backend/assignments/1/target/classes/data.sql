@@ -20,7 +20,8 @@ INSERT INTO device_inventory
 (kickston_id, device_username, device_password, manufacture_date_time, manufacture_factory_place)
 VALUES
 ('KD1001', 'device_admin', 'device_pass', CURRENT_TIMESTAMP, 'Bangalore'),
-('KD1002', 'device_admin', 'device_pass', CURRENT_TIMESTAMP, 'Pune');
+('KD1002', 'device_admin', 'device_pass', CURRENT_TIMESTAMP, 'Pune'),
+('KD1003', 'device_admin', 'device_pass', CURRENT_TIMESTAMP, 'Ranchi');
 
 INSERT INTO devices
 (kickston_id, house_id, room_id, created_date)
