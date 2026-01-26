@@ -1,0 +1,5 @@
+com\kickdrum\smarthome\integration\RoomDeviceIntegrationTest.class
+com\kickdrum\smarthome\service\impl\HouseServiceImplTest.class
+com\kickdrum\smarthome\controller\house\HouseControllerTest.class
+com\kickdrum\smarthome\service\impl\DeviceServiceImplTest.class
+com\kickdrum\smarthome\controller\device\DeviceControllerTest.class

@@ -1,0 +1,25 @@
+type Query {
+    houses: [House]
+    roomsByHouse(houseId: ID!): [Room]
+    devicesByHouse(houseId: ID!): [Device]
+    devicesByRoom(roomId: ID!): [Device]
+}
+
+type House {
+    id: ID
+    name: String
+    address: String
+}
+
+type Room {
+    id: ID
+    name: String
+    houseId: ID
+}
+
+type Device {
+    id: ID
+    kickstonId: String
+    houseId: ID
+    roomId: ID
+}
