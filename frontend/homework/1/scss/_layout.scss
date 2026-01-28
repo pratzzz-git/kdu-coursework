@@ -1,0 +1,177 @@
+
+header {
+  background: $white;
+  border-bottom: 1px solid $light-gray;
+  padding: $space-sm $space-xl;
+
+  nav {
+    @include flex-center(space-between, center);
+
+    .logo h1 {
+      font-size: 1.25rem;
+      color: $primary-color;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: $space-lg;
+
+      li a {
+        font-size: 0.9rem;
+        color: $text-dark;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-2xl;
+  padding: $space-2xl $space-xl;
+  background: $light-gray;
+
+  .hero-content {
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: $space-md;
+    }
+
+    p {
+      color: $text-light;
+      margin-bottom: $space-lg;
+    }
+  }
+
+  .hero-image img {
+    border-radius: 12px;
+  }
+}
+
+
+
+.features {
+  padding: $space-2xl $space-xl;
+  text-align: center;
+
+  h2 {
+    margin-bottom: $space-sm;
+  }
+
+  p {
+    color: $text-light;
+    margin-bottom: $space-xl;
+  }
+
+  .feature-cards {
+    @include grid-auto(250px);
+  }
+}
+
+
+
+.courses {
+  padding: $space-2xl $space-xl;
+
+  h2 {
+    text-align: center;
+    margin-bottom: $space-xl;
+  }
+
+  .course-cards {
+    @include grid-auto(280px);
+  }
+}
+
+
+.stats {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: $white;
+  padding: $space-xl;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+
+
+.contact {
+  padding: $space-2xl $space-xl;
+
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-2xl;
+  }
+}
+
+
+
+footer {
+  background: #111827;
+  color: $white;
+  text-align: center;
+  padding: $space-lg;
+}
+
+
+
+@include respond(tablet) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .stats {
+    padding: $space-lg;
+  }
+}
+
+
+@include respond(mobile) {
+  header nav {
+    flex-direction: column;
+    gap: $space-sm;
+
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: $space-sm;
+    }
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: $space-md;
+  }
+}
+
+
+
+@include respond(small) {
+  header,
+  .hero,
+  .features,
+  .courses,
+  .contact {
+    padding-left: $space-sm;
+    padding-right: $space-sm;
+  }
+}

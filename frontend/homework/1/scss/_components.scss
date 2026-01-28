@@ -1,0 +1,97 @@
+
+
+.hero-buttons {
+  display: flex;
+  gap: $space-md;
+
+  a {
+    padding: 0.75em 1.5em;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:first-child {
+      background: $primary-color;
+      color: $white;
+    }
+
+    &:last-child {
+      border: 2px solid $primary-color;
+      color: $primary-color;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+
+
+.feature-cards article {
+  background: $white;
+  padding: $space-lg;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: left;
+
+  h3 {
+    margin: $space-md 0 $space-sm;
+  }
+
+  p {
+    color: $text-light;
+  }
+}
+
+
+
+.course-cards article {
+  background: $white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: $space-lg;
+
+  ul {
+    margin: $space-md 0;
+    padding-left: $space-md;
+  }
+
+  p {
+    font-weight: bold;
+    margin-bottom: $space-md;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    background: $secondary-color;
+    color: $white;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+
+
+@include respond(mobile) {
+  .hero-buttons {
+    flex-direction: column;
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@include respond(small) {
+  button,
+  .hero-buttons a {
+    width: 100%;
+  }
+}
