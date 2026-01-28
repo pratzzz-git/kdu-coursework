@@ -1,0 +1,20 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  input, select, textarea {
+    padding: $space-sm;
+    border: 1px solid $light-gray;
+    border-radius: 6px;
+  }
+
+  button {
+    background: $primary-color;
+    color: $white;
+    padding: 0.8em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
