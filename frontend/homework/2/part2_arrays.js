@@ -14,7 +14,6 @@ const employees = [
   employee5
 ];
 
-console.log(employees);
 
 function filterByExperience(employees, minExperience) {
   return employees.filter(emp => emp.experience >= minExperience);

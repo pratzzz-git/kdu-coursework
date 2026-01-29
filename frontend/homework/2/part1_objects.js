@@ -1,6 +1,6 @@
 const employee1 = {
   id: 1,
-  name: "Aarav Sharma",
+  name: "Alice Johnson",
   age: 30,
   salary: 85000,
   department: "Engineering",
@@ -10,7 +10,7 @@ const employee1 = {
 
 const employee2 = {
   id: 2,
-  name: "Rohit Verma",
+  name: "Bob Smith",
   age: 28,
   salary: 60000,
   department: "HR",
@@ -20,7 +20,7 @@ const employee2 = {
 
 const employee3 = {
   id: 3,
-  name: "Priya Iyer",
+  name: "Charlie Lee",
   age: 35,
   salary: 95000,
   department: "Engineering",
@@ -30,7 +30,7 @@ const employee3 = {
 
 const employee4 = {
   id: 4,
-  name: "Neha Kapoor",
+  name: "Diana Prince",
   age: 26,
   salary: 50000,
   department: "Sales",
@@ -40,7 +40,7 @@ const employee4 = {
 
 const employee5 = {
   id: 5,
-  name: "Ankit Gupta",
+  name: "Evan Brown",
   age: 32,
   salary: 70000,
   department: "HR",
@@ -55,7 +55,6 @@ module.exports = {
   employee4,
   employee5
 };
-
 function getEmployeeInfo(employee) {
   return `${employee.name} works in ${employee.department} and earns ${employee.salary}`;
 }
@@ -78,4 +77,3 @@ function compareEmployees(emp1, emp2) {
 module.exports.getEmployeeInfo = getEmployeeInfo;
 module.exports.addSkill = addSkill;
 module.exports.compareEmployees = compareEmployees;
-
