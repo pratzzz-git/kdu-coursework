@@ -55,3 +55,27 @@ module.exports = {
   employee4,
   employee5
 };
+
+function getEmployeeInfo(employee) {
+  return `${employee.name} works in ${employee.department} and earns ${employee.salary}`;
+}
+
+function addSkill(employee, skill) {
+  employee.skills.push(skill);
+}
+
+employee1.getFullInfo = function () {
+  return `${this.name}, ${this.age}, ${this.department}, ${this.salary}, ${this.skills.join(", ")}`;
+};
+
+function compareEmployees(emp1, emp2) {
+  if (emp1.skills.length > emp2.skills.length) {
+    return emp1.name;
+  }
+  return emp2.name;
+}
+
+module.exports.getEmployeeInfo = getEmployeeInfo;
+module.exports.addSkill = addSkill;
+module.exports.compareEmployees = compareEmployees;
+
