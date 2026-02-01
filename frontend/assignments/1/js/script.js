@@ -14,13 +14,13 @@ if (tweetInput) {
 
 /* Post new tweet */
 postButtons.forEach(btn => {
-  btn.addEventListener("click", e => {
+  btn.addEventListener("click", () => {
     if (btn.classList.contains("disabled")) return;
 
     const text = tweetInput.value.trim();
     if (!text) return;
 
-    const post = createPostElement(text, true);
+    const post = createPostElement(text);
     postsContainer.prepend(post);
 
     tweetInput.value = "";
@@ -32,66 +32,34 @@ postButtons.forEach(btn => {
 const randomCount = () => Math.floor(Math.random() * 100);
 
 /* Create post */
-function createPostElement(text, isNew = false) {
+function createPostElement(text) {
   const post = document.createElement("article");
   post.className = "post";
 
-  const likeCount = isNew ? 0 : randomCount();
-  const commentCount = isNew ? 0 : randomCount();
-  const repostCount = isNew ? 0 : randomCount();
-
   post.innerHTML = `
-  <div class="post-avatar">
-    <img src="./assets/icons/profile-icon.svg" />
-  </div>
-
-  <div class="post-body">
-    <div class="post-header">
-      <span class="post-name">Pratiksha</span>
-      <span class="post-handle">@prat_iksha2432 · now</span>
-      <img class="post-more" src="./assets/icons/dot-icon.svg" />
+    <div class="post-avatar">
+      <img src="./assets/icons/profile-icon.svg" />
     </div>
 
-    <p class="post-text">${text}</p>
-
-    <div class="post-actions">
-      <div class="action comment">
-        <img src="./assets/icons/comment.svg" />
-        <span>0</span>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Pratiksha</span>
+        <span class="post-handle">@prat_iksha2432 · now</span>
+        <img class="post-more" src="./assets/icons/dot-icon.svg" />
       </div>
 
-      <div class="action repost">
-        <img src="./assets/icons/retweet.svg" />
-        <span>0</span>
-      </div>
+      <p class="post-text">${text}</p>
 
-      <div class="action like">
-        <img src="./assets/icons/like.svg" />
-        <span>0</span>
-      </div>
-
-      <div class="action views">
-        <img src="./assets/icons/stats.svg" />
-        <span>0</span>
-      </div>
-
-      <div class="action share">
-        <img src="./assets/icons/share.svg" />
-      </div>
-
-      <div class="action bookmark">
-        <img src="./assets/icons/bookmark-icon.svg" />
+      <div class="post-actions">
+        <div class="action comment"><img src="./assets/icons/comment.svg" /><span>0</span></div>
+        <div class="action repost"><img src="./assets/icons/retweet.svg" /><span>0</span></div>
+        <div class="action like"><img src="./assets/icons/like.svg" /><span>0</span></div>
+        <div class="action views"><img src="./assets/icons/stats.svg" /><span>0</span></div>
+        <div class="action share"><img src="./assets/icons/share.svg" /></div>
+        <div class="action bookmark"><img src="./assets/icons/bookmark-icon.svg" /></div>
       </div>
     </div>
-
-    <div class="comments hidden">
-      <input class="comment-input" placeholder="Add a comment" />
-      <button class="comment-btn">Comment</button>
-      <div class="comment-list"></div>
-    </div>
-  </div>
-`;
-
+  `;
 
   setupPostInteractions(post);
   return post;
@@ -99,7 +67,8 @@ function createPostElement(text, isNew = false) {
 
 /* Post interactions */
 function setupPostInteractions(post) {
-  /* Like */
+
+  /* LIKE */
   const like = post.querySelector(".like");
   const likeIcon = like.querySelector("img");
   const likeCount = like.querySelector("span");
@@ -113,7 +82,7 @@ function setupPostInteractions(post) {
     likeCount.textContent = Number(likeCount.textContent) + (liked ? 1 : -1);
   });
 
-  /* Repost */
+  /* REPOST */
   const repost = post.querySelector(".repost");
   const repostCount = repost.querySelector("span");
   let reposted = false;
@@ -123,31 +92,60 @@ function setupPostInteractions(post) {
     repostCount.textContent = Number(repostCount.textContent) + (reposted ? 1 : -1);
   });
 
-  /* Comments */
-  const commentIcon = post.querySelector(".comment");
-  const commentsBox = post.querySelector(".comments");
-  const commentInput = post.querySelector(".comment-input");
-  const commentBtn = post.querySelector(".comment-btn");
-  const commentList = post.querySelector(".comment-list");
-  const commentCount = commentIcon.querySelector("span");
+  /* COMMENTS (on click only) */
+  const commentAction = post.querySelector(".comment");
+  const commentCount = commentAction.querySelector("span");
+  let commentBox = null;
 
-  commentIcon.addEventListener("click", () => {
-    commentsBox.classList.toggle("hidden");
-  });
+  commentAction.addEventListener("click", () => {
+    if (commentBox) {
+      commentBox.remove();
+      commentBox = null;
+      return;
+    }
 
-  commentBtn.addEventListener("click", () => {
-    const text = commentInput.value.trim();
-    if (!text) return;
+    commentBox = document.createElement("div");
+    commentBox.className = "comment-box";
+    commentBox.innerHTML = `
+      <div class="comment-input-row">
+        <input class="comment-input" placeholder="Add a comment" />
+        <button class="comment-btn">Comment</button>
+      </div>
+      <div class="comment-list"></div>
+    `;
 
-    const div = document.createElement("div");
-    div.className = "comment-item";
-    div.textContent = text;
+    post.querySelector(".post-body").appendChild(commentBox);
 
-    commentList.appendChild(div);
-    commentInput.value = "";
-    commentCount.textContent = Number(commentCount.textContent) + 1;
+    const input = commentBox.querySelector(".comment-input");
+    const btn = commentBox.querySelector(".comment-btn");
+    const list = commentBox.querySelector(".comment-list");
+
+    btn.addEventListener("click", () => {
+      const text = input.value.trim();
+      if (!text) return;
+
+      const item = document.createElement("div");
+      item.className = "comment-item";
+      item.textContent = text;
+
+      list.appendChild(item);
+      input.value = "";
+      commentCount.textContent = Number(commentCount.textContent) + 1;
+    });
   });
 }
+
+/* Initialize default HTML posts */
+document.querySelectorAll(".post").forEach(post => {
+  if (post.dataset.initialized) return;
+
+  post.querySelectorAll(".action span").forEach(span => {
+    span.textContent = randomCount();
+  });
+
+  setupPostInteractions(post);
+  post.dataset.initialized = "true";
+});
 
 /* Mobile drawer */
 const avatarTrigger = document.querySelector(".mobile-avatar-btn");
@@ -165,15 +163,3 @@ if (avatarTrigger && drawer && backdrop) {
     backdrop.classList.remove("show");
   });
 }
-/* Initialize default HTML posts */
-document.querySelectorAll(".post").forEach(post => {
-  if (post.dataset.initialized) return;
-
-  post.querySelectorAll(".action span").forEach(span => {
-    span.textContent = Math.floor(Math.random() * 100);
-  });
-
-  setupPostInteractions(post);
-  post.dataset.initialized = "true";
-});
-

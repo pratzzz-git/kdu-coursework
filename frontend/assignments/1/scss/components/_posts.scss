@@ -119,27 +119,26 @@
 
 }
 
-/* ================= COMMENTS (EXPANDABLE) ================= */
+/* ================= COMMENT UI ================= */
 
-.comments {
+.comment-box {
   margin-top: 10px;
-  padding-top: 8px;
-  border-top: 1px solid #222;
 }
 
-.comments.hidden {
-  display: none;
+.comment-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .comment-input {
-  width: 100%;
+  flex: 1;
   background: transparent;
-  border: 1px solid #333;
-  border-radius: 6px;
-  padding: 8px 10px;
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: 6px 4px;
   color: #fff;
   font-size: 14px;
-  margin-bottom: 6px;
 }
 
 .comment-input::placeholder {
@@ -148,8 +147,8 @@
 
 .comment-btn {
   background: vars.$blue;
-  color: #fff;
   border: none;
+  color: #fff;
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 13px;
