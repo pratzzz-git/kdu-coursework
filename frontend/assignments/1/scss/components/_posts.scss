@@ -1,0 +1,169 @@
+@use "../abstracts/variables" as vars;
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #222;
+}
+
+.post-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.post-body {
+  flex: 1;
+}
+
+
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.post-name {
+  font-weight: 600;
+}
+
+.post-handle {
+  color: #888;
+}
+
+.post-more {
+  margin-left: auto;
+  width: 16px;
+  cursor: pointer;
+}
+
+.post-text {
+  margin: 6px 0 10px;
+  line-height: 1.4;
+}
+
+.hashtag {
+  color: vars.$blue;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 420px;
+  margin-top: 8px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.action img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+.action span {
+  font-size: 13px;
+  color: #777;
+}
+
+.action:hover img {
+  opacity: 1;
+}
+
+/* ================= MOBILE POST ICONS ================= */
+@media (max-width: 480px) {
+  .post-actions {
+    max-width: 100%;
+    padding-right: 8px;
+  }
+
+  .action {
+    gap: 4px;
+  }
+
+  .action img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .action span {
+    font-size: 12px;
+  }
+
+  .post-wrapper{
+    display: flex !important;
+    gap: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+ .drafts{
+   font-size: 14px !important;
+   font-weight: 400 !important;
+   color: #1d9bf0 !important;
+}
+
+}
+
+/* ================= COMMENTS (EXPANDABLE) ================= */
+
+.comments {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #222;
+}
+
+.comments.hidden {
+  display: none;
+}
+
+.comment-input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.comment-input::placeholder {
+  color: #666;
+}
+
+.comment-btn {
+  background: vars.$blue;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.comment-list {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.comment-item {
+  font-size: 13px;
+  color: #ddd;
+}

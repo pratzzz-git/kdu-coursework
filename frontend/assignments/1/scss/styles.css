@@ -1,0 +1,530 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-size: 16px;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.navigation-section {
+  width: 260px;
+  height: 100vh;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+}
+
+.nav-logo {
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.nav-logo img {
+  width: 28px;
+  height: 28px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-item:hover {
+  background: #111;
+}
+
+.nav-item.active span {
+  font-weight: 600;
+}
+
+.nav-post-btn {
+  margin: 16px 12px;
+  padding: 14px;
+  border-radius: 999px;
+  background: #1d9bf0;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-user {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 999px;
+}
+
+.nav-user:hover {
+  background: #111;
+}
+
+.nav-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.handle {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ================= MOBILE DRAWER ================= */
+.mobile-drawer,
+.drawer-backdrop {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .mobile-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 100%;
+    background: #000;
+    padding: 16px;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+  .mobile-drawer.open {
+    transform: translateX(0);
+  }
+  .drawer-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 900;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .drawer-backdrop.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .drawer-avatar {
+    width: 40px;
+    border-radius: 50%;
+  }
+  .drawer-plus {
+    width: 20px;
+  }
+  .drawer-user {
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .drawer-user span {
+    color: #777;
+  }
+  .drawer-stats {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  .drawer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .mobile-avatar-btn {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .mobile-avatar-btn img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  .drawer-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .mobile-avatar-btn {
+    display: block;
+  }
+  .drawer-links img {
+    width: 22px;
+    opacity: 0.9;
+  }
+}
+#app {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+  min-width: 0;
+  border-left: 1px solid #222;
+  border-right: 1px solid #222;
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 480px) {
+  #app {
+    flex-direction: column;
+  }
+  .navigation-section {
+    display: none;
+  }
+  main {
+    border-left: none;
+    padding-bottom: 72px;
+    border-right: none;
+  }
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #222;
+}
+
+.post-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.post-body {
+  flex: 1;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.post-name {
+  font-weight: 600;
+}
+
+.post-handle {
+  color: #888;
+}
+
+.post-more {
+  margin-left: auto;
+  width: 16px;
+  cursor: pointer;
+}
+
+.post-text {
+  margin: 6px 0 10px;
+  line-height: 1.4;
+}
+
+.hashtag {
+  color: #1d9bf0;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 420px;
+  margin-top: 8px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.action img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+.action span {
+  font-size: 13px;
+  color: #777;
+}
+
+.action:hover img {
+  opacity: 1;
+}
+
+/* ================= MOBILE POST ICONS ================= */
+@media (max-width: 480px) {
+  .post-actions {
+    max-width: 100%;
+    padding-right: 8px;
+  }
+  .action {
+    gap: 4px;
+  }
+  .action img {
+    width: 18px;
+    height: 18px;
+  }
+  .action span {
+    font-size: 12px;
+  }
+  .post-wrapper {
+    display: flex !important;
+    gap: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .drafts {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #1d9bf0 !important;
+  }
+}
+/* ================= COMMENTS (EXPANDABLE) ================= */
+.comments {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #222;
+}
+
+.comments.hidden {
+  display: none;
+}
+
+.comment-input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.comment-input::-moz-placeholder {
+  color: #666;
+}
+
+.comment-input::placeholder {
+  color: #666;
+}
+
+.comment-btn {
+  background: #1d9bf0;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.comment-list {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.comment-item {
+  font-size: 13px;
+  color: #ddd;
+}
+
+.tweet-box {
+  padding: 16px;
+  border-bottom: 1px solid #222;
+}
+
+.tweet-header {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.tweet-body {
+  display: flex;
+  gap: 12px;
+}
+
+.tweet-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.tweet-input-area {
+  flex: 1;
+}
+
+.tweet-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  color: #fff;
+  font-size: 20px;
+  min-height: 80px;
+}
+
+.tweet-input::-moz-placeholder {
+  color: #777;
+}
+
+.tweet-input::placeholder {
+  color: #777;
+}
+
+.tweet-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.tweet-icons img {
+  width: 20px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.tweet-icons img:hover {
+  opacity: 1;
+}
+
+.post-btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  background: #1d9bf0;
+  color: white;
+}
+
+.post-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Mobile / Desktop visibility */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: flex;
+  }
+  .tweet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tweet-input {
+    font-size: 18px;
+  }
+  .reply-permission {
+    color: #1d9bf0;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .tweet-avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: orange;
+    color: black !important;
+    padding: 5px;
+  }
+  .tweet-body {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .navigation-section {
+    flex-direction: row;
+    width: 100%;
+    min-height: auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-links {
+    display: none;
+  }
+  #app {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=styles.css.map */
