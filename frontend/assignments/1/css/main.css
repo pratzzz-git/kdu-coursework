@@ -496,7 +496,23 @@ main {
   gap: 20px;
 }
 }
+
+ .comment-input{
+    background: transparent;
+    padding: 20px 10px 20px 0px;
+    margin-top: 10px;
+    border: none;
+  }
+
+  .comment-btn{
+        background: transparent;
+    color: wheat;
+    padding: 5px 20px;
+    border-radius: 100px;
+    border: 1px solid white;
+  }
 @media (max-width: 768px) {
+ 
   .navigation-section {
     flex-direction: row;
     width: 100%;
