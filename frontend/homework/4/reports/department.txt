@@ -1,0 +1,8 @@
+Department: Engineering
+
+Alice Johnson - 85000
+Charlie Brown - 91000
+Frank Miller - 120000
+
+Total Salary: 296000
+Average Salary: 98666.66666666667

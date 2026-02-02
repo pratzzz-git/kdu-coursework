@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X Homepage</title>
+
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <!-- DESKTOP NAVIGATION -->
+  <nav class="navigation-section">
+    <div class="nav-logo">
+      <img src="./assets/icons/black-with-white.png" alt="X" />
+    </div>
+
+    <ul class="nav-links">
+      <li class="nav-item active">
+        <img src="./assets/icons/home-icon 1.svg" />
+        <span>Home</span>
+      </li>
+      <li class="nav-item">
+        <img src="./assets/icons/search.svg" />
+        <span>Explore</span>
+      </li>
+      <li class="nav-item">
+        <img src="./assets/icons/notif-icon.svg" />
+        <span>Notifications</span>
+      </li>
+      <li class="nav-item">
+        <img src="./assets/icons/mail-icon.svg" />
+        <span>Messages</span>
+      </li>
+      <li class="nav-item">
+        <img src="./assets/icons/list-icon.svg" />
+        <span>Grok</span>
+      </li>
+      <li class="nav-item">
+        <img src="./assets/icons/list-icon.svg" />
+        <span>Lists</span>
+      </li>
+      <li class="nav-item">
+        <img src="./assets/icons/bookmark-icon.svg" />
+        <span>Bookmarks</span>
+      </li>
+      <li class="nav-item">
+        <img src="./assets/icons/list-icon.svg" />
+        <span>Communities</span>
+      </li>
+      <li class="nav-item">
+        <img src="./assets/icons/premium-icon.svg" />
+        <span>Premium</span>
+      </li>
+      <li class="nav-item">
+        <img src="./assets/icons/profile-icon.svg" />
+        <span>Profile</span>
+      </li>
+      <li class="nav-item">
+        <img src="./assets/icons/dot-icon.svg" />
+        <span>More</span>
+      </li>
+    </ul>
+
+    <button class="tweet-btn nav-post-btn">Post</button>
+
+    <div class="nav-user">
+      <img src="./assets/icons/profile-icon.svg" />
+      <div>
+        <div class="username">Pratiksha</div>
+        <div class="handle">@prat_iksha2432</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- TWEET BOX -->
+    <section class="tweet-box">
+
+      <!-- Desktop header -->
+      <div class="tweet-header desktop-only">
+        <h2>Home</h2>
+      </div>
+
+      <!-- Mobile header -->
+      <div class="tweet-header mobile-only">
+        <button class="mobile-avatar-btn">
+          <img src="./assets/icons/back-button.svg" />
+        </button>
+      <div class="post-wrapper">
+        <span class="drafts">Drafts</span>
+        <button class="post-btn disabled">Post</button>
+      </div>
+      </div>
+
+      <div class="tweet-body">
+        <div class="tweet-avatar">
+          <img src="./assets/icons/profile-icon.svg" />
+          <textarea
+            class="tweet-input"
+            placeholder="What is happening?!"
+          ></textarea>
+        </div>
+
+        <div class="tweet-input-area">
+
+          <div class="reply-permission mobile-only">
+            🌐 Everyone can reply
+          </div>
+
+          <div class="tweet-actions">
+            <div class="tweet-icons">
+              <img src="./assets/icons/gallery-icon.svg" />
+              <img src="./assets/icons/gif-icon.svg" />
+              <img src="./assets/icons/list-icon.svg" />
+              <img src="./assets/icons/location-icon.svg" />
+            </div>
+
+            <button class="post-btn desktop-only disabled">Post</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POSTS -->
+    <section class="posts">
+      <article class="post">
+        <div class="post-avatar">
+          <img src="./assets/icons/profile-icon.svg" />
+        </div>
+
+        <div class="post-body">
+          <div class="post-header">
+            <span class="post-name">PratZzzz</span>
+            <span class="post-handle">@Pratzzz · 34s</span>
+            <img class="post-more" src="./assets/icons/dot-icon.svg" />
+          </div>
+
+          <p class="post-text">
+            Coffee in hand, bugs beware. Time to crush some code.
+            <span class="hashtag">#DeveloperLife</span>
+            <span class="hashtag">#Coding</span>
+          </p>
+<div class="post-actions">
+  <div class="action comment">
+    <img src="./assets/icons/comment.svg" />
+    <span>0</span>
+  </div>
+
+  <div class="action repost">
+    <img src="./assets/icons/retweet-blue.svg" />
+    <span>2</span>
+  </div>
+
+  <div class="action like">
+    <img src="./assets/icons/like.svg" />
+    <span>36</span>
+  </div>
+
+  <div class="action views">
+    <img src="./assets/icons/stats.svg" />
+    <span>7</span>
+  </div>
+
+  <div class="action share">
+    <img src="./assets/icons/share.svg" />
+  </div>
+
+  <div class="action bookmark">
+    <img src="./assets/icons/bookmark-icon.svg" />
+  </div>
+</div>
+
+
+      </article>
+    </section>
+
+  </main>
+</div>
+
+<!-- MOBILE DRAWER -->
+<aside class="mobile-drawer">
+  <div class="drawer-header">
+    <img src="./assets/icons/profile-icon.svg" class="drawer-avatar" />
+    <img src="./assets/icons/plus-icon.svg" class="drawer-plus" />
+  </div>
+
+  <div class="drawer-user">
+    <strong>Pratiksha</strong>
+    <span>@Prat_zz</span>
+
+    <div class="drawer-stats">
+      <span><b>1</b> Following</span>
+      <span><b>0</b> Followers</span>
+    </div>
+  </div>
+
+  <nav class="drawer-links">
+    <a><img src="./assets/icons/profile-icon.svg" />Profile</a>
+    <a><img src="./assets/icons/x-icon.svg" />Premium</a>
+    <a><img src="./assets/icons/list-icon.svg" />Lists</a>
+    <a><img src="./assets/icons/bookmark-icon.svg" />Bookmarks</a>
+    <a><img src="./assets/icons/communities-icon.svg" />Communities</a>
+    <a><img src="./assets/icons/monetisation.svg" />Monetization</a>
+    <a><img src="./assets/icons/ads-icon.svg" />Ads</a>
+    <a><img src="./assets/icons/settings-icon.svg" />Settings and privacy</a>
+    <a><img src="./assets/icons/logout-icon.svg" />Log out</a>
+  </nav>
+</aside>
+
+<div class="drawer-backdrop">
+   <div class="drawer-header">
+    <img src="./assets/icons/profile-icon.svg" class="drawer-avatar" />
+    <img src="./assets/icons/plus-icon.svg" class="drawer-plus" />
+  </div>
+
+  <div class="drawer-user">
+    <strong>Pratiksha</strong>
+    <span>@Prat_zz</span>
+
+    <div class="drawer-stats">
+      <span><b>250</b> Following</span>
+      <span><b>309</b> Followers</span>
+    </div>
+  </div>
+
+  <nav class="drawer-links">
+    <a><img src="./assets/icons/profile-icon.svg" />Profile</a>
+    <a><img src="./assets/icons/black-with-white.png" />Premium</a>
+    <a><img src="./assets/icons/list-icon.svg" />Lists</a>
+    <a><img src="./assets/icons/bookmark-icon.svg" />Bookmarks</a>
+    <a><img src="./assets/icons/community-icon.svg" />Communities</a>
+    <a><img src="./assets/icons/monetiation.svg" />Monetization</a>
+    <a><img src="./assets/icons/adds.svg" />Ads</a>
+    <a><img src="./assets/icons/settings-icon.svg" />Settings and privacy</a>
+    <a><img src="./assets/icons/logout-icon.svg" />Log out</a>
+  </nav>
+</div>
+<div class="drawer-backdrop"></div>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
