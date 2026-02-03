@@ -1,0 +1,42 @@
+@use '../base/variables' as v;
+
+.dashboard-history h2 {
+  margin-bottom: 12px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  border: 1px solid v.$border;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buy-text {
+  color: v.$green;
+}
+
+.sell-text {
+  color: v.$red;
+}
+
+.history-time {
+  font-size: 12px;
+  margin-top: 4px;
+}
+.dashboard-history h2 {
+  font-weight: 600;
+}
+
+.history-header span:first-child {
+  font-weight: 500;
+}

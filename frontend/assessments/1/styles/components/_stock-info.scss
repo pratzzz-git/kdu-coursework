@@ -1,0 +1,48 @@
+@use '../base/variables' as v;
+
+.stock-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid v.$border;
+  padding: 10px;
+  height: 70px;
+}
+
+.stock-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: 1px solid v.$border;
+  padding: 6px;
+}
+
+.stock-name img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.stock-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #000;
+    padding: 10px;}
+
+.price-change.positive {
+  color: v.$green;
+}
+.stock-name span {
+  font-weight: 500;
+}
+
+.stock-price {
+  font-weight: 500;
+}
+
+.price-value {
+  font-weight: 600;
+}

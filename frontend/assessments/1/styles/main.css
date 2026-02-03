@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.dashboard-header {
+  background: #1871c2;
+  color: #fff;
+  padding: 16px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.dashboard {
+  padding: 16px;
+}
+
+.dashboard-content {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.dashboard-main {
+  width: 75%;
+  border: 1px solid #000;
+  padding: 16px;
+}
+
+.dashboard-history {
+  width: 25%;
+  border: 1px solid #000;
+  padding: 16px;
+}
+
+.graph-container {
+  height: 500px;
+  border: 1px solid #000;
+  margin-top: 16px;
+}
+
+.dashboard-history h2 {
+  margin-bottom: 12px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buy-text {
+  color: #2fae44;
+}
+
+.sell-text {
+  color: #e03131;
+}
+
+.history-time {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.dashboard-history h2 {
+  font-weight: 600;
+}
+
+.history-header span:first-child {
+  font-weight: 500;
+}
+
+.stock-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #000;
+  padding: 10px;
+  height: 70px;
+}
+
+.stock-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #000;
+  padding: 6px;
+}
+
+.stock-name img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.stock-price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #000;
+  padding: 6px;
+}
+
+.price-change.positive {
+  color: #2fae44;
+}
+
+.stock-name span {
+  font-weight: 500;
+}
+
+.stock-price {
+  font-weight: 500;
+}
+
+.price-value {
+  font-weight: 600;
+}
+
+.stock-quantity {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
+.stock-quantity input {
+  width: 100px;
+}
+
+.stock-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-buy {
+  background: #b2f2bb;
+  border: 1px solid #2fae44;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn-sell {
+  background: #ffe3e3;
+  border: 1px solid #e03131;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.graph-container {
+  position: relative;
+  height: 500px;
+  border: 1px solid #000;
+  margin-top: 16px;
+}
+
+.graph-grid {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(to right, transparent 0, transparent 99px, #000 100px), repeating-linear-gradient(to bottom, transparent 0, transparent 124px, #000 125px);
+  opacity: 0.5;
+}
+
+.bars {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  z-index: 2;
+}
+
+.bars > div {
+  align-self: flex-end;
+}
+
+/*# sourceMappingURL=main.css.map */

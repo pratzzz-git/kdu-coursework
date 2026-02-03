@@ -1,0 +1,16 @@
+@use '../base/variables' as v;
+
+.dashboard-header {
+  background: v.$blue;
+  color: #fff;
+  padding: 16px;
+  border: 1px solid v.$border;
+
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  font-weight: 600;
+  font-size: 20px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KDU Stock Market Dashboard</title>
+
+ <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+
+
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <header class="dashboard-header">
+      <h1>KDU Stock Market Dashboard</h1>
+    </header>
+
+   
+    <main class="dashboard-content">
+
+    
+      <section class="dashboard-main">
+
+       
+        <div class="stock-info">
+
+          <div class="stock-name">
+           <img
+  src="https://mir-s3-cdn-cf.behance.net/projects/404/af1307136664867.Y3JvcCw1NzUzLDQ1MDAsNDIsMA.jpg"
+  alt="Zomato"/>
+            <span>Zomato</span>
+          </div>
+
+          <div class="stock-price">
+            <span>Price</span>
+            <strong class="price-value">142.32</strong>
+            <span class="price-change positive">▲ 3.00%</span>
+          </div>
+
+          <div class="stock-quantity">
+            <input type="number" placeholder="Enter QTY" />
+          </div>
+
+          <div class="stock-actions">
+            <button class="btn-buy">BUY</button>
+            <button class="btn-sell">SELL</button>
+          </div>
+
+        </div>
+
+     
+        <div class="graph-container">
+          <div class="graph-grid"></div>
+          <div class="bars"></div>
+        </div>
+
+      </section>
+
+     
+      <aside class="dashboard-history">
+
+        <h2>History</h2>
+
+        <div class="history-list">
+
+          <div class="history-item">
+            <div class="history-header">
+              <span>100 stocks</span>
+              <span class="buy-text">Buy</span>
+            </div>
+            <div class="history-time">
+              Fri, 02 Feb 1996 21:04:05 GMT
+            </div>
+          </div>
+
+          <div class="history-item">
+            <div class="history-header">
+              <span>100 stocks</span>
+              <span class="sell-text">Sell</span>
+            </div>
+            <div class="history-time">
+              Fri, 02 Feb 1996 21:04:05 GMT
+            </div>
+          </div>
+
+        </div>
+
+      </aside>
+
+    </main>
+  </div>
+<script type="module" src="scripts/main.js"></script>
+
+
+</body>
+</html>

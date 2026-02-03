@@ -1,0 +1,29 @@
+@use '../base/variables' as v;
+
+.dashboard {
+  padding: 16px;
+}
+
+.dashboard-content {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.dashboard-main {
+  width: 75%;
+  border: 1px solid v.$border;
+  padding: 16px;
+}
+
+.dashboard-history {
+  width: 25%;
+  border: 1px solid v.$border;
+  padding: 16px;
+}
+
+.graph-container {
+  height: 500px;
+  border: 1px solid v.$border;
+  margin-top: 16px;
+}
