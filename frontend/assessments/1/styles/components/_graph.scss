@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+
+.graph-container {
+  position: relative;
+  height: 500px;
+  border: 1px solid v.$border;
+  margin-top: 16px;
+}
+
+.graph-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      transparent 0,
+      transparent 99px,
+      #000 100px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 124px,
+      #000 125px
+    );
+  opacity: 0.5;
+}
+
+.bars {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  z-index: 2;
+}
+
+.bars > div {
+  align-self: flex-end;
+}
+

@@ -12,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "14.x"
+          node-version: '14.x'
 
       - name: Install SonarQube Scanner
         run: npm install -g sonarqube-scanner
@@ -27,14 +27,14 @@ jobs:
       - name: SonarQube Scan
         run: |
           cd ./frontend/assessments/1 && sonar-scanner \
-            -Dsonar.projectKey=${{ secrets.KDUER_NAME }}-FE-Assessment-1 \
+            -Dsonar.projectKey=${{ secrets.KDUER_NAME }}-FE-Assessment-2 \
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
       ## below steps are for posting analysis comment on Github PR
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
+          node-version: '16.x'
           cache: npm
           cache-dependency-path: .github/actions-scripts/package-lock.json
 
@@ -49,7 +49,7 @@ jobs:
           PERSONAL_ACCESS_TOKEN_GITHUB: ${{ secrets.PERSONAL_ACCESS_TOKEN_GITHUB }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-          SONAR_PROJECT_KEY: ${{ secrets.KDUER_NAME }}-FE-Assessment-1
+          SONAR_PROJECT_KEY: ${{ secrets.KDUER_NAME }}-FE-Assessment-2
           USERNAME_GITHUB: ${{ secrets.USERNAME_GITHUB }}
           REPO_NAME_GITHUB: ${{ secrets.REPO_NAME_GITHUB }}
           PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}

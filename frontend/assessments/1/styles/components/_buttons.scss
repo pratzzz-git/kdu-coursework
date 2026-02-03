@@ -1,0 +1,20 @@
+@use '../base/variables' as v;
+
+.stock-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-buy {
+  background: v.$green-bg;
+  border: 1px solid v.$green;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn-sell {
+  background: v.$red-bg;
+  border: 1px solid v.$red;
+  padding: 8px 12px;
+  cursor: pointer;
+}

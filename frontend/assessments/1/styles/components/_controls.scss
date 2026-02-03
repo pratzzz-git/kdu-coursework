@@ -1,0 +1,10 @@
+@use '../base/variables' as v;
+
+.stock-quantity {
+  border: 1px solid v.$border;
+  padding: 10px;
+}
+
+.stock-quantity input {
+  width: 100px;
+}
