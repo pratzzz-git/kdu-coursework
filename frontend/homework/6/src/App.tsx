@@ -6,7 +6,7 @@ import {
   fetchBooksFromData,
   searchBooks,
   getBooksByMinRating,
-   getAvailableBooks,
+  getAvailableBooks,
   getBooksByYearRange,
 } from "./services/bookService";
 
@@ -16,45 +16,45 @@ import Stats from "./components/Stats/Stats";
 
 function App() {
   const [books, setBooks] = useState<Book[]>([]);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [selectedGenre, setSelectedGenre] = useState<string>("");
-  const [minRating, setMinRating] = useState<number>(0);
+  const [searchText, setSearchText] = useState<string>("");
+  const [genre, setGenre] = useState<string>("");
+  const [rating, setRating] = useState<number>(0);
 
   useEffect(() => {
-    async function loadBooks() {
+    async function loadData() {
       try {
         const data = await fetchBooksFromData();
         setBooks(data);
       } catch {
-        setErrorMessage("Failed to load books");
+        setError("Failed to load books");
       }
     }
 
-    loadBooks();
+    loadData();
   }, []);
 
   const filteredBooks = useMemo(() => {
     let result = [...books];
 
-    result = searchBooks(result, searchQuery);
+    result = searchBooks(result, searchText);
 
-    if (selectedGenre) {
-      result = result.filter((book) => book.genre === selectedGenre);
+    if (genre) {
+      result = result.filter((book) => book.genre === genre);
     }
 
-    result = getBooksByMinRating(result, minRating);
+    result = getBooksByMinRating(result, rating);
 
     return result;
-  }, [books, searchQuery, selectedGenre, minRating]);
+  }, [books, searchText, genre, rating]);
 
   const totalBooks = books.length;
   const availableBooks = books.filter((b) => b.available).length;
   const unavailableBooks = totalBooks - availableBooks;
 
-  if (errorMessage) {
-    return <div>{errorMessage}</div>;
+  if (error) {
+    return <div>{error}</div>;
   }
 
   return (
@@ -62,12 +62,12 @@ function App() {
       <h1>Book Library</h1>
 
       <Filters
-        searchQuery={searchQuery}
-        selectedGenre={selectedGenre}
-        minRating={minRating}
-        onSearchChange={setSearchQuery}
-        onGenreChange={setSelectedGenre}
-        onRatingChange={setMinRating}
+        searchQuery={searchText}
+        selectedGenre={genre}
+        minRating={rating}
+        onSearchChange={setSearchText}
+        onGenreChange={setGenre}
+        onRatingChange={setRating}
       />
 
       <Stats

@@ -1,0 +1,46 @@
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33m4413e2f[m HEAD@{1}: commit: FEhomework-6: Book Library Manager with TS services and React UI
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{2}: checkout: moving from main to FEhomework6
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{3}: checkout: moving from main to main
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{4}: checkout: moving from FEhomework-5-clean to main
+[33m866f3e2[m[33m ([m[1;31morigin/FEhomework-5-clean[m[33m, [m[1;32mFEhomework-5-clean[m[33m)[m HEAD@{5}: commit: Add NestJS Todo Management API (Homework 5)
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{6}: checkout: moving from main to FEhomework-5-clean
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{7}: checkout: moving from FEhomework-5 to main
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{8}: checkout: moving from main to FEhomework-5
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{9}: checkout: moving from FEassessment1 to main
+[33mbdb5980[m[33m ([m[1;31morigin/FEassessment1[m[33m, [m[1;32mFEassessment1[m[33m)[m HEAD@{10}: reset: moving to HEAD
+[33mbdb5980[m[33m ([m[1;31morigin/FEassessment1[m[33m, [m[1;32mFEassessment1[m[33m)[m HEAD@{11}: commit: removed-sonar
+[33mf795be4[m HEAD@{12}: commit: sonar
+[33m2ddab40[m HEAD@{13}: commit: removed sonar
+[33m2742f81[m HEAD@{14}: commit: sonar
+[33md32a75e[m HEAD@{15}: commit: sonar
+[33mf8f03e7[m HEAD@{16}: commit: FE assessment 1
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{17}: checkout: moving from main to FEassessment1
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{18}: checkout: moving from FEhomework4 to main
+[33m6d8cdfd[m[33m ([m[1;31morigin/FEhomework4[m[33m, [m[1;32mFEhomework4[m[33m)[m HEAD@{19}: reset: moving to HEAD
+[33m6d8cdfd[m[33m ([m[1;31morigin/FEhomework4[m[33m, [m[1;32mFEhomework4[m[33m)[m HEAD@{20}: commit: All requirements fullfilled
+[33mfaa5aa2[m HEAD@{21}: checkout: moving from main to FEhomework4
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{22}: checkout: moving from main to main
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{23}: checkout: moving from FEassignment1 to main
+[33m471df58[m[33m ([m[1;31morigin/FEassignment1[m[33m, [m[1;32mFEassignment1[m[33m)[m HEAD@{24}: commit: ..
+[33mfaa5aa2[m HEAD@{25}: checkout: moving from FEhomework4 to FEassignment1
+[33mfaa5aa2[m HEAD@{26}: checkout: moving from FEassignment1 to FEhomework4
+[33mfaa5aa2[m HEAD@{27}: commit: ..
+[33mc36faa3[m HEAD@{28}: commit: sonar
+[33me64b1eb[m HEAD@{29}: commit: major functionality added
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{30}: checkout: moving from main to FEassignment1
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{31}: checkout: moving from FEhomework3 to main
+[33m53bfee2[m[33m ([m[1;31morigin/FEhomework3[m[33m, [m[1;32mFEhomework3[m[33m)[m HEAD@{32}: commit: JS Advance HandsON
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{33}: checkout: moving from main to FEhomework3
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{34}: checkout: moving from FEhomework2 to main
+[33mbacdf9f[m[33m ([m[1;31morigin/FEhomework2[m[33m, [m[1;32mFEhomework2[m[33m)[m HEAD@{35}: commit: ..
+[33m3629a62[m HEAD@{36}: commit: ..
+[33m20a99ef[m HEAD@{37}: commit: Part 2: Array operations using filter, map, reduce, sort
+[33me3a8e06[m HEAD@{38}: commit: Task 1.1: Created employee objects
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{39}: checkout: moving from main to FEhomework2
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{40}: checkout: moving from main to main
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{41}: checkout: moving from FEhomework1 to main
+[33m151d8cd[m[33m ([m[1;31morigin/FEhomework1[m[33m, [m[1;32mFEhomework1[m[33m)[m HEAD@{42}: commit: ..
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{43}: checkout: moving from main to FEhomework1
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{44}: checkout: moving from main to main
+[33m29b40df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFEhomework6[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mFEhomework-5[m[33m)[m HEAD@{45}: clone: from https://github.com/pratzzz-git/kdu-coursework.git
