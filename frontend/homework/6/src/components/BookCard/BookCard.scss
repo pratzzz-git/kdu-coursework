@@ -1,0 +1,25 @@
+.book-card {
+  border: 1px solid #444;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.book-card.available {
+  border-color: #4caf50;
+}
+
+.book-card.unavailable {
+  border-color: #f44336;
+}
+
+.book-title {
+  margin: 0 0 4px 0;
+}
+
+.book-author,
+.book-genre,
+.book-rating,
+.book-status {
+  margin: 2px 0;
+}
